@@ -7,6 +7,13 @@
   background-repeat: no-repeat
   transition: all .5s
 
+  &:before
+    position: absolute
+    width: 100%
+    height: 100%
+    background-color: alpha($dark-black, .5)
+    content: ''
+
   // index
   &.full_page
     height: $index_top_img_height

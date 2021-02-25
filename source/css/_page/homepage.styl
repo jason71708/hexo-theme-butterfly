@@ -6,7 +6,7 @@
     display: flex
     flex-direction: row
     align-items: center
-    height: 20em
+    // height: 20em
     border-radius: 12px 8px 8px 12px
     background: var(--card-bg)
     box-shadow: var(--card-box-shadow)
@@ -65,7 +65,7 @@
     & >.recent-post-info
       display: inline-block
       overflow: hidden
-      padding: 0 40px
+      padding: 40px
       width: 55%
 
       &.no-cover
@@ -125,7 +125,7 @@
       & > .content
         @extend .limit-more-line
         margin-top: .3rem
-        -webkit-line-clamp: 3
+        -webkit-line-clamp: 8
 
 +maxWidth768()
   #recent-posts
