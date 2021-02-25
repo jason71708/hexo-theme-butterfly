@@ -56,9 +56,7 @@ hexo.extend.helper.register('related_posts', function (currentPost, allPosts) {
 
     for (let i = 0; i < Math.min(relatedPosts.length, limitNum); i++) {
       const cover =
-        relatedPosts[i].cover === false
-          ? relatedPosts[i].randomcover
-          : relatedPosts[i].cover
+        relatedPosts[i].cover = config.cover.default_cover
       result +=
         '<div><a href="' +
         hexoConfig.root +

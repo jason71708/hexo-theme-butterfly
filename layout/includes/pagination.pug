@@ -17,7 +17,7 @@ else
     if(prev)
       - var hasPageNext = next ? 'pull-left' : 'pull-full'
       .prev-post(class=hasPageNext)
-        - var pagination_cover = prev.cover === false ? prev.randomcover : prev.cover
+        - var pagination_cover = theme.cover.default_cover
         a(href=url_for(prev.path))
           if theme.lazyload.enable
             img.prev-cover(data-lazy-src=url_for(pagination_cover) onerror=`onerror=null;src='${url_for(theme.error_img.post_page)}'` alt='cover of previous post')
@@ -29,7 +29,7 @@ else
           
     if(next)
       - var hasPagePrev = prev ? 'pull-right' : 'pull-full'
-      - var pagination_cover = next.cover == false ? next.randomcover : next.cover
+      - var pagination_cover = theme.cover.default_cover
       .next-post(class=hasPagePrev)
         a(href=url_for(next.path))
           if theme.lazyload.enable

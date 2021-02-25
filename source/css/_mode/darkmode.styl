@@ -19,6 +19,9 @@ if hexo-config('darkmode.enable') || hexo-config('display_mode') == 'dark'
     --btn-hover-color: lighten(#121212, 40)
     --btn-color: alpha(#FFFFFF, .7)
     --btn-bg: lighten(#121212, 5)
+    --sidetool-hover-color: #FFFFFF
+    --sidetool-color: lighten(#121212, 5)
+    --sidetool-bg: alpha(#FFFFFF, .8)
     --text-bg-hover: lighten(#121212, 15)
     --light-grey: alpha(#FFFFFF, .7)
     --white: alpha(#FFFFFF, .9)
@@ -29,11 +32,11 @@ if hexo-config('darkmode.enable') || hexo-config('display_mode') == 'dark'
     --toc-link-color: alpha(#FFFFFF, .6)
 
     #web_bg:before,
-    #footer:before,
+    #footer:before
       position: absolute
       width: 100%
       height: 100%
-      background-color: alpha($dark-black, .7)
+      background-color: alpha($dark-black, .5)
       content: ''
 
     #article-container

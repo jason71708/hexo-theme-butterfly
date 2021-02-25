@@ -1,4 +1,4 @@
-- let tocNumber = page.toc_number !== undefined ? page.toc_number : theme.toc.number
+//- - let tocNumber = page.toc_number !== undefined ? page.toc_number : theme.toc.number
 
 #card-toc.card-widget
   .item-headline
@@ -6,7 +6,7 @@
     span= _p('aside.card_toc')
 
   if (page.encrypt == true)
-    .toc-content.toc-div-class(style="display:none")!=toc(page.origin, {list_number: tocNumber})
+    .toc-content.toc-div-class(style="display:none")!=toc(page.origin, {list_number: false})
   else 
-    .toc-content!=toc(page.content, {list_number: tocNumber})
+    .toc-content!=toc(page.content, {list_number: false})
       

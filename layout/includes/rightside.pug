@@ -1,8 +1,11 @@
 #rightside
   #rightside-config-hide
-    if is_post() && theme.readmode
-      button#readmode(type="button" title=_p('rightside.readmode_title'))
+    if theme.aside.enable && theme.aside.button && page.aside !== false
+      button#hide-aside-btn(type="button" title=_p('rightside.aside'))
         i.fas.fa-book-open
+    //- if is_post() && theme.readmode
+    //-   button#readmode(type="button" title=_p('rightside.readmode_title'))
+    //-     i.fas.fa-book-open
     if theme.change_font_size
       button#font-plus(type="button" title=_p('rightside.font_plus_title'))
         i.fas.fa-plus
@@ -13,9 +16,6 @@
     if theme.darkmode.enable && theme.darkmode.button
       button#darkmode(type="button" title=_p('rightside.night_mode_title'))
         i.fas.fa-adjust
-    if theme.aside.enable && theme.aside.button && page.aside !== false
-      button#hide-aside-btn(type="button" title=_p('rightside.aside'))
-        i.fas.fa-arrows-alt-h
   #rightside-config-show
     if is_post()
       if (theme.readmode || theme.translate.enable || (theme.darkmode.enable && theme.darkmode.button) || theme.change_font_size)
